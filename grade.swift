@@ -379,7 +379,7 @@ var dictionary: [String] =
 
 var count = dictionary.count
 
-var string = "that jungle bunny is fast. i will kick his ass"
+var string = "we watched 2 girls 1 cup and one guy one jar last night"
 
 var value = 0
 var autoGrade = 0
