@@ -198,6 +198,7 @@ var dictionary: [String] =
 "jiggerboo",
 "jizz",
 "juggs",
+"jungle bunny",
 "kike",
 "kinbaku",
 "kinkster",
@@ -372,13 +373,13 @@ var dictionary: [String] =
 "xx",
 "xxx",
 "yaoi",
-"yellow showers",
+"yellow shower",
 "yiffy",
 "zoophilia"]
 
 var count = dictionary.count
 
-var string = "this is a test post"
+var string = "that jungle bunny is fast. i will kick his ass"
 
 var value = 0
 var autoGrade = 0
@@ -396,6 +397,8 @@ for var index = 0; index < count; index++ {
             print("\(dictionary[index]) is a flagged word")
     }
 }
+
+print(value)
 
 if value >= 4 {
     autoGrade = 0
@@ -418,11 +421,17 @@ else if value == 0 {
 //else
     //humanGrade = 0
 
+//if human check selected
 weightedAutoGrade = 0.25 * Double(autoGrade)
 weightedHumGrade = 0.75 * Double(humanGrade)
 weightedTotal = weightedAutoGrade + weightedHumGrade
 
-print("Your post has a grade of \(weightedTotal)")
+//elseif user doesn't want human check
+//weightedAutoGrade = 1.00 * Double(autoGrade)
+//weightedHumGrade = 0.00
+//weightedTotal = weightedAutoGrade + weightedHumGrade
+
+print("Your post has a grade of \(weightedTotal)%")
 
 if weightedTotal >= 90 {
     print("Make post")
