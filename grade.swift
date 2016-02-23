@@ -12,7 +12,7 @@ var dictionary: [String] =
 
 var count = dictionary.count
 
-var string = "anal anal anal anilingus"
+var string = "this is a test post"
 
 var value = 0
 var autoGrade = 0
@@ -21,12 +21,13 @@ var weightedTotal : Double
 var weightedAutoGrade : Double
 var weightedHumGrade : Double
 
+value = dictionary.map({
+    string.lowercaseString.componentsSeparatedByString($0).count - 1
+}).reduce(0, combine:+)
+
 for var index = 0; index < count; index++ {
-    if string.rangeOfString(dictionary[index]) != nil {
-            print("\(dictionary[index])")
-            value++
+    if string.lowercaseString.rangeOfString(dictionary[index]) != nil {
             print("\(dictionary[index]) is a flagged word")
-            print(value)
     }
 }
 
